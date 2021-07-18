@@ -15,6 +15,9 @@ html{
 .container{
     width: auto;
 }
+.responsive{
+    visibility: hidden;
+}
 .modal-content{
     position: fixed;
     top: 0;
@@ -126,7 +129,10 @@ label:active:after {
     justify-content: space-between;
     margin: 50px;
     background-image: url(/assets/Backgroundbackground.svg);
-}h1{
+}.container-text{
+    width: 50%;
+}
+h1{
     color: var(--color-heading);
     text-transform: uppercase;
     letter-spacing: -0.08em;
@@ -244,6 +250,10 @@ a{
 .footer-container{
     position: relative;
     top:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
 }
 .footer-1{
     display: flex;
@@ -259,10 +269,9 @@ a{
 }
 .footer-2{
     display: flex;
-    height: 320px;
     position: relative;
     top: 60px;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
 }
 ul{
@@ -279,7 +288,7 @@ ul{
 
 .flex-form-footer > input[type=text],.flex-form-footer > [type=email], .flex-form-footer > select {
     position: relative;
-    width: 65%;
+    width: 80%;
     padding: 12px 20px;
     font-size: 15px;
     margin: 10px 0;
@@ -289,7 +298,7 @@ ul{
     box-sizing: border-box;
 }
 .flex-form-footer > .bnt-submit-footer {
-width:65%;
+width:80%;
 position: relative;
 background-color: var(--color-btn);
 color: var(--color-text);
@@ -300,3 +309,39 @@ border: none;
 border-radius: 4px;
 cursor: pointer;
 } 
+
+@media only screen and (max-device-width: 1187px){
+    .responsive{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        background-color: var(--bg);
+        z-index: 2000;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        visibility: visible;
+       
+    }
+    .responsive-modal{
+        background-color: var(--bg-panel);
+        width: 20%;
+        height: 20%;
+        min-width: 300px;
+        border-radius:8px;
+        text-align: center;
+    }.p-responsive {
+        position: relative;
+        top: 10px;
+        color: var(--color-text);
+        font-style: normal;
+        text-transform:uppercase;
+        font-weight: normal;
+        font-size:20px;
+        line-height: 21px;
+        letter-spacing: -0.02em;
+    }
+}
